@@ -1,0 +1,20 @@
+.car1{
+    height:350px;
+    width:350px;
+    margin:10px;
+}
+#nav{
+    background-color:#28a745;
+}
+.car2{
+    height:250px;
+    width:350px;
+    margin: 10px;
+    
+}
+
+.device{
+    height:150px ;
+    width: 200px;
+    margin: 10px;
+}
