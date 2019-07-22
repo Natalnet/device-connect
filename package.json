@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/Natalnet/device-connect#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "mongoose": "^5.5.14",
     "socket.io": "^2.2.0"
-  }
+  },
+  "devDependencies": {}
 }

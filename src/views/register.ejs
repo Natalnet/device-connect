@@ -1,0 +1,24 @@
+<div class="bg-primary" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="col-lg-4 bg-white" style="padding: 20px;">
+        <header style="display: inline-flex; align-items: center; margin-bottom: 30px;">
+            <a href="./login" style="margin: 0 15px 0 0; font-size: 26px;"><i class="fas fa-arrow-circle-left"></i></a>
+            <h3 class="m-0">Cadastro de Usuário</h3>
+        </header>
+        <%if(error !== ''){%>
+        <div class="alert alert-danger">
+            <%- error %>
+        </div>
+        <%}%>
+        <form method="post">
+            <label>Nome:</label>
+            <input class="form-control" type="text" name="name">
+            <label style="margin-top: 10px;">Email:</label>
+            <input class="form-control" type="email" name="email">
+            <label style="margin-top: 10px;">Senha:</label>
+            <input class="form-control" type="password" name="password">
+            <label style="margin-top: 10px;">Confirmar senha:</label>
+            <input class="form-control" type="password" name="confpassword">
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">Cadastrar</button>
+        </form>
+    </div>
+</div>
