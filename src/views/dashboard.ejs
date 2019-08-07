@@ -1,12 +1,75 @@
-<div class="row bg-success" style="min-height: 100vh;align-items: flex-start;padding-top: 50px;">
-    <div class="col-lg-3 offset-lg-1 bg-white">
-        <ul class="nav flex-column" >
-            <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
-            </li>
-        </ul>
+<div class="row bg-success" style="min-height: 100vh;margin: 0;">
+    <div class="container">
+        <nav >
+            <button  data-toggle="modal" data-target="#exampleModalScrollable">
+                <i class="fas fa-th"></i>
+            </button>
+            <button>
+                <i class="fas fa-user"></i>
+            </button>
+            <button>
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div class="devices">
+            <button>
+                <i class="fas fa-tablet-alt"></i>
+                <span>Tablet</span>
+            </button>
+            <button>
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile</span>
+            </button>
+            <button>
+                <i class="fas fa-desktop"></i>
+                <span>Desktop</span>
+            </button>
+            <i class="fas fa-plus-circle" data-toggle="modal" data-target="#addDevice" style="cursor: pointer;"></i>
+        </div>
     </div>
-    <div class="col-lg-7 bg-white">
-        
+</div>
+<!-- Modal para adicionar Dispositivo -->
+<div class="modal fade" id="addDevice" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Adiconar Dispositivo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
     </div>
+    <div class="modal-body">
+        <p>Para conectar o dispositivo à sua conta é necessário acessá-lo para verificar o código de identificação.</p>
+        <form>
+            <label for="id"></label>
+            <input class="form-control" placeholder="Digite o código do device." type="text" id="id">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Adicionar</button>
+    </div>
+    </div>
+</div>
+</div>
+      
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body"> 
+        ...
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+    </div>
+</div>
 </div>

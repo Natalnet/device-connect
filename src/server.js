@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
@@ -12,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/deviceconnect', {useNewUrlParser: tr
 //Configurando Body Parser
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
 //Configurandno o View Engine
 app.set('views', 'src/views');
 app.set('view engine', 'ejs');

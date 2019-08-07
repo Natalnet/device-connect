@@ -32,10 +32,30 @@ router.route('/cadastrardevice')
 
 router.route('/login')
     .get((req, res, next) => {
-        res.render('login');
+        res.render('login', {error: ''});
     })
     .post((req, res, next) => {
+        const {email, password } = req.body;
+        User.findOne({email}).then( response => {
+            if(response === null){
+                res.render('login', {error: 'Este email ainda não esta cadastrado!'}); //email nao encontrado
+            } else {
+                
+                if(bcryptjs.compareSync(password, response.password)){
+                    res.cookie("email", email);
+                    res.cookie("password", response.password);
+                    res.cookie("name", response.name);
+                    res.redirect('/dashboard');
+                } else {
+                    res.render('login',{error: 'Email ou senha incorreto!'}); //senha errada
+                }
+            
+            }
 
+        })
+        .catch(err => console.log(err));
+        
+        
     })
 router.route('/register')
     .get((req, res, next) => {
@@ -61,7 +81,10 @@ router.route('/register')
         });
         
     })
-
+router.route('/dashboard')
+    .get((req, res, next) => {
+        res.render('dashboard');
+    })
 
 router.get('/teste', (req, res, next) => {
     res.render('dashboard');
