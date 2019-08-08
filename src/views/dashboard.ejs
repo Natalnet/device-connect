@@ -1,18 +1,18 @@
 <div class="row bg-success" style="min-height: 100vh;margin: 0;">
     <div class="container">
         <nav >
-            <button  data-toggle="modal" data-target="#exampleModalScrollable">
+            <button  data-toggle="modal" data-target="#galleryModal">
                 <i class="fas fa-th"></i>
             </button>
             <button>
                 <i class="fas fa-user"></i>
             </button>
-            <button>
-                <i class="fas fa-bars"></i>
+            <button onclick="window.location = 'http://localhost:5000/login'">
+                <i class="fas fa-sign-out-alt"></i>
             </button>
         </nav>
         <div class="devices">
-            <button>
+            <button data-toggle="modal" data-target="#tabletModal">
                 <i class="fas fa-tablet-alt"></i>
                 <span>Tablet</span>
             </button>
@@ -52,7 +52,91 @@
     </div>
 </div>
 </div>
-      
+
+
+<!-- Modal do tablet-->
+<div class="modal fade" id="tabletModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Tablet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Nome do dispositivo:</strong> Tablet.</p>
+        <p><strong>Modelo do dispositivo:</strong> Samsiung Tab A.</p>
+        <p><strong>Localizado:</strong> Museu de Ciências Morfológicas - Sala do Mar.</p>
+
+        <p>Selecione qual midia deve ser transmitida no dispositivo:
+            <button  data-toggle="modal" data-target="#galleryModal">
+                    <i class="fas fa-th"></i>
+            </button>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+    </div>
+    </div>
+</div>
+</div>
+<!-- Modal da galeria-->
+<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Galeria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </form>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+            <div class="col" style="display: flex; justify-content: center; align-items: center; font-size: 30px; background-color: lightgrey; margin: 0 5px; height: 75px;">
+                <i class="fas fa-images"></i>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+    </div>
+    </div>
+</div>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-scrollable" role="document">
