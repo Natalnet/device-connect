@@ -13,6 +13,9 @@ class App{
     };
 
     routes(){
+        this.server.get('/', (req, res) => {
+            return res.send('foi');
+        })
         //this.server.use(routes);
     };
     
