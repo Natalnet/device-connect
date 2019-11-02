@@ -23,7 +23,7 @@
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "mongoose": "^5.5.14",
+    "mongoose": "^5.7.5",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {}
